@@ -1,0 +1,12 @@
+{
+    "developmentLocal": {
+        "dialect": "postgres",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "omitNull": true,
+        "database": "discussion_dev",
+        "username": "root",
+        "password": "arohit799",
+        "timezone": "Europe/Kiev"
+    }
+}

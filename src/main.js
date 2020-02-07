@@ -4,7 +4,7 @@ import Koa from 'koa';
 import cors from '@koa/cors';
 import bodyParser from 'koa-body';
 import db from './db';
-// import appRouter from './routes';
+import appRouter from './routes';
 
 // import errorHandler from './middlewares/errorHandler';
 
@@ -17,7 +17,7 @@ const app = new Koa();
 // app.use(errorHandler);
 app.use(bodyParser());
 app.use(cors());
-// app.use(appRouter.routes());
+app.use(appRouter.routes());
 
 app.use(function* () {
     this.body = "Hellod World !!!";

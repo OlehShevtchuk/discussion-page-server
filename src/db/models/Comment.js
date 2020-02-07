@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
             state: DataTypes.STRING,
             text: DataTypes.STRING,
         },
-        { hierarchy: true },
+        { hierarchy: true,
+          onDelete: 'CASCADE' },
     );
     return Comment;
 };

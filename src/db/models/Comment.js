@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             author: DataTypes.STRING,
             state: DataTypes.STRING,
-            text: DataTypes.STRING,
+            text: DataTypes.TEXT,
         },
         { hierarchy: true,
           onDelete: 'CASCADE' },

@@ -4,8 +4,10 @@ import models from '../db';
 const router = new Router();
 
 router.get('/', async ctx => {
-    // const comment = await models.Comment.create({ author: "Tato", state: "positive", text: 'Helloggggg everyone!', parentId: 1});
-    const comments = await models.Comment.findAndCountAll({ hierarchy: true });
+    const comments = await models.Comment.findAndCountAll({ 
+        hierarchy: true,
+        //order: [[models.sequelize.col('createdAt'), 'DESC']] 
+    });
     ctx.body = comments;
 });
 

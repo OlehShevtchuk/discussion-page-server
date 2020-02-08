@@ -10,7 +10,7 @@ import errorHandler from './middlewares/errorHandler';
 
 const { sequelize } = db;
 
-const PORT = 3030;
+const PORT = process.env.PORT || 3000;
 
 const app = new Koa();
 
